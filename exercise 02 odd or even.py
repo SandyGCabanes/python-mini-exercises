@@ -13,14 +13,21 @@ tell that to the user. If not, print a different appropriate message.
 """
 
 num = int(input("Please type in a whole number:  "))
+check = int(input("Please type in another whole number as divisor:  "))
 
 multiple4 = num % 4
+divcheck = num % check
 remainder = num % 2
 
 
 if multiple4 == 0:
     print ("Number {} is a multiple of 4.".format(num))
 elif multiple4 >0:
+    print ('')
+
+if divcheck == 0:
+    print ("Number {} is a multiple of {}.".format(num, check))
+elif divcheck >0:
     print ('')
 
 if remainder ==0:
