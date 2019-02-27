@@ -1,0 +1,62 @@
+#sandygcabanes
+#practicepython.org
+#exercise 10 list overlap comprehensions
+"""List Overlap Comprehensions
+Exercise 10 (and Solution)
+This week’s exercise is going to be revisiting an old exercise
+(see Exercise 5), except require the solution in a different way.
+Take two lists, say for example these two:
+	a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+	b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+and write a program that returns a list that contains only the elements
+that are common between the lists (without duplicates).
+Make sure your program works on two lists of different sizes.
+Write this in one line of Python using at least one list comprehension.
+(Hint: Remember list comprehensions from Exercise 7).
+
+The original formulation of this exercise said to write the solution
+using one line of Python, but a few readers pointed out that this was
+impossible to do without using sets that I had not yet discussed on the blog,
+so you can either choose to use the original directive and read about
+the set command in Python 3.3, or try to implement this on your own
+and use at least one list comprehension in the solution.
+
+Extra:
+Randomly generate two lists to test this
+"""
+
+"""
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+newlist = list(set([int(x*y/y) for x in a for y in b if x*y == x*x]))
+print ("New list with elements common to a and b:")
+print (newlist)
+"""
+
+import random
+len_a = int (input("Enter length of first random list a:"))
+len_b = int (input("Enter length of second random list b:"))
+
+def random_list(n):
+    list = []
+    i = 0
+    while i < n:
+        list.append(random.randint(1,100))
+        i +=1
+    return (list)
+
+a = random_list(len_a)
+print ("1st random list a:")
+print (a)
+
+b = random_list(len_b)
+print ("2nd random list b:")
+print (b)
+
+newlist = list(set([int(x*y/y) for x in a for y in b if x*y == x*x]))
+print ("New list with elements common to a and b:")
+print (newlist)
+
+
+
