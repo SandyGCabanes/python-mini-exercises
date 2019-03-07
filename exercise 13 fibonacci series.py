@@ -26,11 +26,7 @@ elif n >2:
     fibolist = [1,1]
     i = 2
     while i < n :
-        if i ==2:
-            newitem = fibolist[1] + fibolist[0]
-            fibolist.append(newitem)
-        else:
-            newitem = fibolist[i-1] + fibolist[i-2]
-            fibolist.append(newitem)
+        newitem = fibolist[i-1] + fibolist[i-2]
+        fibolist.append(newitem)
         i += 1
     print (fibolist)
