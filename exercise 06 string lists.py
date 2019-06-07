@@ -1,14 +1,22 @@
 #sandygcabanes
 #practicepython.org
-#exercise 07 list comprehensions
-"""Exercise 7 (and Solution)
-Let’s say I give you a list saved in a variable:
-    a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100].
-    Write one line of Python that takes this list a and makes a new list
-    that has only the even elements of this list in it.
-"""
+#exercise 06 string lists
+"""Exercise 06 and solution
+Ask the user for a string and print out whether this string is a palindrome or
+not. (A palindrome is a string that reads the same forwards and backwards.)"""
 
-a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-a_even = [num for num in a if num % 2 == 0]
+new_str = str(input("Type in any string: "))
+list_a = list(new_str)
+len_a = len(new_str)
+list_b = []
+i = len_a -1
+while i != -1:
+    list_b.append(list_a[i])
+    i -= 1
+print("Your input string in a list format:  ", list_a)
+print("Reverse of that list:  ", list_b)
 
-#print (a_even)
+if list_a == list_b:
+    print("That string is a palindrome.")
+else:
+    print("That string is not a palindrome.")
