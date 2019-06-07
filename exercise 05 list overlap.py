@@ -35,5 +35,7 @@ n +=1
 
 print ("Common to a and b are:", newlist)
 
-
+# one line of python
+c = set(list(a+b))
+print (c)
 
