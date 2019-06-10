@@ -29,7 +29,7 @@ Randomly generate two lists to test this
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
-newlist = list(set([int(x*y/y) for x in a for y in b if x*y == x*x]))
+newlist = list(set([int(x for x in a for y in b if x == y]))
 print ("New list with elements common to a and b:")
 print (newlist)
 """
@@ -54,7 +54,7 @@ b = random_list(len_b)
 print ("2nd random list b:")
 print (b)
 
-newlist = list(set([int(x*y/y) for x in a for y in b if x*y == x*x]))
+newlist = list(set([(x for x in a for y in b if x == y]))
 print ("New list with elements common to a and b:")
 print (newlist)
 
